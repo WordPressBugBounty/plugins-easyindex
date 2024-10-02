@@ -1,0 +1,12 @@
+{
+    "name": "Garfield",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "sample",
+    "isText": true,
+    "description": "A text index with a sample of posts, one per line with list bullets",
+    "sequence": 1,
+    "parentID": "style121",
+    "formatting": {}
+}

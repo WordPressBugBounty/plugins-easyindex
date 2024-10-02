@@ -1,0 +1,20 @@
+{
+    "name": "Earl",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "gallery",
+    "isMasonry": true,
+    "hasExcerpts": true,
+    "description": "A Pinterest-like gallery. Masonry layout and infinite scrolling",
+    "sequence": 1,
+    "defaults": {
+        "ixThumbWidth": 236,
+        "ixThumbHeight": 0,
+        "ixExcerptLength": 100,
+        "ixTermTag": "h2",
+        "ixTitleTag": "h4"
+    },
+    "basic": [],
+    "formatting": {}
+}

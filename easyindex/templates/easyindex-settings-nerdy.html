@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- START PAGE -->
+<table style="width:95%;margin-left:auto;margin-right:auto; border-collapse:collapse">
+    <tr>
+        <td class="ei-label"><span class="xlate">CSS to exclude:</span></td>
+        <td><textarea style="width:480px; height:120px" class="ei-textfield" name="EasyIndex[excludecss]">#excludeCss#</textarea><br>
+        <span class="ei-explain xlate">Some plugins and themes load poorly designed CSS that interferes with the styling of other plugins<br>
+        Enter the stylesheet ID of any CSS to be excluded on EasyIndex admin pages<br>
+        Separate IDs with a commas or spaces.
+        </span><a href="#/helpurl##css-to-exclude" class="ei-info" target="_blank"></a></td>
+    </tr>
+
+    <tr>
+        <td class="ei-label"><span class="xlate">Reset slugs:</span></td>
+        <td><button id="btnEIResetSlugs">Reset slugs</button><div id="divEISlugWait" style="display:none">Please wait ...</div><br>
+        <span class="ei-explain xlate">It's possible in some unsual circumstances (like a server crash) for the index slugs to get out of sync with the permalinks.<br>
+        It's very unlikely to happen, but if it does, you can reset the slugs and rebuild the permalinks.<br>
+        It won't do any harm if you do this when it's not required.
+        </span><a href="#/helpurl##reset-slugs" class="ei-info" target="_blank"></a></td>
+    </tr>
+
+    <tr>
+        <td class="ei-label"><span class="xlate">Recalculate taxonomy counts:</span></td>
+        <td><button id="btnEITaxonomyCount">Recalulate taxonomy counts</button><div id="divEITaxWait" style="display:none">Please wait ...</div><br>
+        <span class="ei-explain xlate">It's possible for the count of posts in each taxonomy to get out of sync.<br>
+        If the counts are incorrect, an index may be missing some items or show items that have no posts.<br>
+        It won't do any harm if you do this when it's not required.
+        </span><a href="#/helpurl##recalculate-taxonomy-counts" class="ei-info" target="_blank"></a></td>
+    </tr>
+
+    <tr>
+        <td class="ei-label"><span class="xlate">Debug logging:</span></td>
+        <td><input id="debuglog" type="checkbox" name="EasyIndex[debugLog]" #debugLogChecked# />
+            <br>
+            <span class="ei-explain xlate">Turns on debug logging</span><a href="#/helpurl##debug-logging" class="ei-info" tabindex="-1" target="_blank"></a></td>
+    </tr>
+</table>
+<!-- END PAGE -->
+</body>
+</html>
+

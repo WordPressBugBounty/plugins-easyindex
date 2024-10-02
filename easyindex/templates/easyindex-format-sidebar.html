@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- START PAGE -->
+<div id="eiFormatSidebar">
+    <div id="eiFSBWindow">
+        <div id="eiFSBContent">
+            <!-- START INCLUDEIF !isTrial -->
+            <div class="ei-fsb-heading">
+                EasyIndex<br>
+                Live Formatting
+            </div>
+            <ul id="eiFSBLinks">
+                <!-- START REPEAT SECTIONS -->
+                <li ei-target="#target#" class="eiIndent#indent#">#section#</li>
+                <!-- END REPEAT SECTIONS -->
+            </ul>
+            <div class="ei-fsb-reset ei-icon">Reset all</div>
+            <div class="ei-fsb-save">
+                <button id="eiSave">Save</button>
+            </div>
+            <div class="ei-fsb-close ei-icon">Close</div>
+            <!-- END INCLUDEIF !isTrial -->
+            <div class="ei-fsb-heading">Styles</div>
+            <ul id="ei-fsb-stylelinks">
+                <!-- START REPEAT STYLES -->
+                <li ei-target="#target#" class="#selected#">#style#</li>
+                <!-- END REPEAT STYLES -->
+            </ul>
+            <div class="ei-fsb-reset-style ei-icon">Reset Style</div>
+            <div class="ei-fsb-set-style">
+                <button id="eiSetStyle">Set Style</button>
+            </div>
+            <div class="ei-fsb-close ei-icon">Close</div>
+        </div>
+    </div>
+    <div class="ei-fsb-scroll ei-fsb-down"></div>
+    <div class="ei-fsb-scroll ei-fsb-up"></div>
+</div>
+<!-- START INCLUDEIF !isTrial -->
+<div id="eiFormatLocator">
+    <div id="eiLocatorOuter">
+        <div id="eiLocatorInner"></div>
+    </div>
+    <svg>
+        <line id="eiLV" y1="0" stroke="#0088cc" stroke-width="1" stroke-dasharray="5, 3"/>
+        <line id="eiRV" y1="0" stroke="#0088cc" stroke-width="1" stroke-dasharray="5, 3"/>
+        <line id="eiTH" x1="0" stroke="#0088cc" stroke-width="1" stroke-dasharray="5, 3"/>
+        <line id="eiBH" x1="0" stroke="#0088cc" stroke-width="1" stroke-dasharray="5, 3"/>
+    </svg>
+</div>
+<!-- END INCLUDEIF !isTrial -->
+<div id="eiStylePreviewContainer">
+    <div id="eiStylePreviews"></div>
+</div>
+<!-- END PAGE -->
+</body>
+</html>
+

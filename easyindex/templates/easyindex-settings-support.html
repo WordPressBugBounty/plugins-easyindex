@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- START PAGE -->
+<div class="EISHdrExplain xlate">If EasyIndex isn't working for you, or not working as you expect, we're keen to help.<br>
+    <span class="xlate">Please be as specific as you can when describing your problem</span>.
+</div>
+<table>
+    <tr>
+        <th scope="row">Your first name:</th>
+        <td><input type="text" id="inpEIDName" maxlength="20"/></td>
+    </tr>
+    <tr>
+        <th scope="row">Email:</th>
+        <td><input type="text" id="inpEIDEmail"/></td>
+    </tr>
+    <tr>
+        <th scope="row">Subject:</th>
+        <td><input type="text" id="inpEIDSubject"/></td>
+    </tr>
+    <tr>
+        <th scope="row">Tell us about the problem:</th>
+        <td><textarea id="inpEIDProblem"></textarea></td>
+    </tr>
+    <tr>
+        <th scope="row">Send diagnostic data:</th>
+        <td><input type="checkbox" id="cbEIDSendDiagnostics" checked="checked"/>
+                    <span class="ei-explain"><span class="xlate">Checking this option sends details about your server and Wordpress configuration along with your support question. It often makes it much easier for us to resolve problems.
+                    We don't collect any personal information - it's just geeky system setup details</span>.<br>
+                    <a href="#wpurl#/easyindex-diagnostics/" target="_blank"><span class="xlate">Click here to see what gets sent</span></a></span>.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" id="tdEISendSupport" style="text-align:center">
+            <button id="btnEISendSupport" class="xlate" style="width:auto">Submit</button>
+            <span id="EIDSending" style="display:none"><img src="#pluginUrl#/images/spinner02.gif" width="16" height="16"/>Sending data... please wait</span>
+            <span id="EIDFail" style="display:none">
+                <p class="xlate">The send failed.</p>
+                <p class="xlate">Try again but if you continue to have problems, leave us a message on our <a href="http://support.easyindexplugin.com/" target="_blank">support page</a></p>
+                <p class="xlate">The error reported was:</p>
+                <p id="EIDErrors"></p>
+            </span>
+        </td>
+    </tr>
+</table>
+<!-- END PAGE -->
+</body>
+</html>
+

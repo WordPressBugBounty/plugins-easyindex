@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- START PAGE -->
+<div class="EISThumbsHdr EISHdrExplain xlate">These images will be displayed on primary index pages that use a "Preset Image" style.<br>
+    If you don't use one the Preset Image styles, you do not need to select any images here.<br>
+    You select which index style to use when you <a href="/wp-admin/post-new.php?post_type=easyindex">create an index</a>.<br>
+    <span style="font-size:13px">Click on an image to upload or change it</span>
+</div>
+<div id="divEISSelectTax">
+    What do you want to index?:
+    <select id="selEISTaxonomy">
+        <!-- START REPEAT TAXONOMIES -->
+        <option value="#value#" #selected#>#label#</option>
+        <!-- END REPEAT TAXONOMIES -->
+    </select>
+
+</div>
+<div id="divEISTermThumbs" class="EISTermThumbs">
+    <!-- START REPEAT TAXONOMYTHUMBS -->
+    <div class="EISTaxonomy #taxonomyVis#" id="taxonomy_#taxName#">
+        <!-- START REPEAT TERMS -->
+        <div class="EISTermThumb"><img id="imgEISTermThumb-#taxName#-#termid#" src="#thumburl#">
+            <div style="height:2.5em">#termname#</div>
+            <input id="inpEISTermThumb-#taxName#-#termid#" type="hidden" name="EasyIndex[termThumbSource][#taxName#][#termid#]" value="#termthumb#">
+        </div>
+        <!-- END REPEAT TERMS -->
+        <div class="EISClear"></div>
+    </div>
+    <!-- END REPEAT TAXONOMYTHUMBS -->
+</div>
+<!-- END PAGE -->
+</body>
+</html>
+

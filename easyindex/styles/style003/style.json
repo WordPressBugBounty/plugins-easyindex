@@ -1,0 +1,12 @@
+{
+    "name": "Adair",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "onesample",
+    "description": "Square sample images. The term name is displayed in a semi transparent box over the image",
+    "sequence": 1,
+    "isIncluded": true,
+    "parentID": "style001",
+    "formatting": {}
+}

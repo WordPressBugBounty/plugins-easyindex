@@ -1,0 +1,28 @@
+{
+    "name": "Arcadia",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "onesample",
+    "description": "Square sample images. The term name is displayed above the image",
+    "sequence": 1,
+    "isIncluded": true,
+    "defaults": {
+        "ixThumbWidth": 150,
+        "ixThumbHeight": 150,
+        "ixTermTag": "h3"
+    },
+    "basic": [
+        {
+            "section": "Term heading box",
+            "target": ".ei-item-term",
+            "type": "box"
+        },
+        {
+            "section": "Term heading",
+            "target": ".ei-item-term a",
+            "type": "text"
+        }
+    ],
+    "formatting": {}
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- START PAGE -->
+<input id="ei-primaryCSS" type="hidden" name="EasyIndex[primary][ixCSS]" value="">
+<input id="ei-secondaryCSS" type="hidden" name="EasyIndex[secondary][ixCSS]" value="">
+<input id="ei-primaryStyleID" type="hidden" name="EasyIndex[primary][ixStyleID]" value="#primaryStyleID#">
+<input id="ei-secondaryStyleID" type="hidden" name="EasyIndex[secondary][ixStyleID]" value="#secondaryStyleID#">
+<input id="ei-pixFormatCSS" type="hidden" name="EasyIndex[primary][ixFormatCss]">
+<input id="ei-sixFormatCSS" type="hidden" name="EasyIndex[secondary][ixFormatCss]">
+<input id="ei-pixGFonts" type="hidden" name="EasyIndex[primary][ixGFonts]">
+<input id="ei-sixGFonts" type="hidden" name="EasyIndex[secondary][ixGFonts]">
+<input id="ei-page-content" type="hidden" name="content" value="%{easyindex}%">
+
+<main id="easyindexUI" class="easyindexUI">
+    <div id="eiEditContainer">
+        <div class="ei-index-column" style="width:inherit">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td class="ei-label"><span class="xlate">Index slug:</span></td>
+                    <td><input type="text" class="" value="#indexSlug#" name="EasyIndex[indexSlug]"><br>
+                        <span class="ei-explain xlate">This is the string that gets inserted into index URL's so Wordpress can identify this page as an EasyIndex<br>
+                       It must be 20 characters or less, all lowercase and contain only letters, numbers, and hyphens.<br>
+                       Changing this on existing index will alter the index's url</span><a href="#/helpurl##index-slug" tabindex="-1" class="ei-info" target="_blank"></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="clearer"></div>
+        <!-- START REPEAT IXTYPES -->
+        <div class="ei-index-column ei-#ixType#">
+            <table>
+                <tr>
+                    <td class="EISColHead xlate" colspan="2">#IXType# Index</td>
+                </tr>
+                <tr>
+                    <td class="ei-label"><span class="xlate">Page template:</span></td>
+                    <td><select name="EasyIndex[#ixType#][ixTemplate]">
+                        <!-- START REPEAT IXTEMPLATES -->
+                        <option value="#template#" #selected#>#templateName#</option>
+                        <!-- END REPEAT IXTEMPLATES -->
+                    </select><br><span class="ei-explain xlate">The page template to use for the #ixType# index page.</span><a href="#/helpurl##page-template" class="ei-info" tabindex="-1" target="_blank"></a></td>
+                </tr>
+                <tr>
+                    <td class="ei-label"><span class="xlate">Index style:</span></td>
+                    <td>
+                        <button id="ei-#ixType#Style" ei-styleid="#styleID#" class="ei-button ei-styleselect">#styleName#</button>
+                        <br><span class="ei-explain xlate">Select the index style.</span><a href="#/helpurl##index-style" class="ei-info" tabindex="-1" target="_blank"></a></td>
+                </tr>
+                <tr>
+                    <td class="ei-label"></td>
+                    <td><span class="ei-style-reset ei-#ixType#">Reset to style defaults</span><br>
+                        <span class="ei-explain xlate">Clear any customizations for this style.</span><a href="#/helpurl##reset-style" class="ei-info" tabindex="-1" target="_blank"></a></td>
+                </tr>
+                <tr class="#ixType#Thumbnail #ixIsText#">
+                    <td class="ei-label"><span class="xlate">Thumbnail size:</span></td>
+                    <td><input type="text" class="ei-thumbsize" value="#ixThumbSize#" name="EasyIndex[#ixType#][ixThumbSize]" #thumbnaildisable#><br>
+                        <span class="ei-explain xlate">The size of the thumbnails on the #ixType# index page<br>
+              Entered like &quot;200x250&quot; (for a 200px by 250px thumbnail)<br>
+              Make the height zero for masonry styles (like &quot;150x0&quot;)</span><a href="#/helpurl##thumbnail-size" class="ei-info" tabindex="-1" target="_blank"></a></td>
+                </tr>
+                <!-- START INCLUDEIF !isSecondary -->
+                <tr class="#ixType#HasTerms #ixHasTerms#">
+                    <td class="ei-label"><span class="xlate">Term tag:</span></td>
+                    <td><select name="EasyIndex[#ixType#][ixTermTag]">
+                        <!-- START REPEAT IXTERMTAGS -->
+                        <option value="#tag#" #selected#>#tagName#</option>
+                        <!-- END REPEAT IXTERMTAGS -->
+                    </select><br>
+                        <span class="ei-explain xlate">The HTML tag to use for terms</span><a href="#/helpurl##term-tag" class="ei-info" tabindex="-1" target="_blank"></a></td>
+                </tr>
+                <!-- END INCLUDEIF !isSecondary -->
+                <tr class="#ixType#HasTitles #ixHasTitles#">
+                    <td class="ei-label"><span class="xlate">Title tag:</span></td>
+                    <td><select name="EasyIndex[#ixType#][ixTitleTag]">
+                        <!-- START REPEAT IXTITLETAGS -->
+                        <option value="#tag#" #selected#>#tagName#</option>
+                        <!-- END REPEAT IXTITLETAGS -->
+                    </select><br>
+                        <span class="ei-explain xlate">The HTML tag to use for post titles</span><a href="#/helpurl##title-tag" class="ei-info" tabindex="-1" target="_blank"></a></td>
+                </tr>
+
+                <!-- START INCLUDEIF !isSecondary -->
+                <tr class="#ixType#IsSingle #ixIsSingle# #ixIsText#">
+                    <td class="ei-label"><span class="xlate">Hide if no thumbnail:</span></td>
+                    <td><input type="checkbox" name="EasyIndex[#ixType#][ixHideBlank]" #singledisable# #hideBlankChecked#><br><span class="ei-explain xlate">Hide index entries if no thumbnail has been uploaded.</span><a href="#/helpurl##hide-if-no-thumbnail" class="ei-info" tabindex="-1" target="_blank"></a>
+                    </td>
+                </tr>
+
+                <tr class="#ixType#HasSamples #ixHasSamples#">
+                    <td class="ei-label"><span class="xlate">Number of posts to show:</span></td>
+                    <td><input type="text" class="" value="#ixNumberPosts#" name="EasyIndex[#ixType#][ixNumberPosts]" size="8" #sampledisable#><br><span class="ei-explain xlate">How many posts do you want to show in each group. Use zero to show all posts.</span><a href="#/helpurl##number-of-posts-to-show" class="ei-info" tabindex="-1" target="_blank"></a>
+                    </td>
+                </tr>
+
+                <tr class="#ixType#HasSamples #ixHasSamples#">
+                    <td class="ei-label"><span class="xlate">&quot;More&quot; text:</span></td>
+                    <td><input type="text" class="" value="#ixMoreText#" name="EasyIndex[#ixType#][ixMoreText]" #sampledisable#><br>
+                        <span class="ei-explain xlate">The text to display when more posts are available.</span><a href="#/helpurl##more-text" class="ei-info" tabindex="-1" target="_blank"></a></td>
+                </tr>
+
+                <tr class="#ixShowDuplicates#">
+                    <td class="ei-label"><span class="xlate">Show duplicates:</span></td>
+                    <td><select class="ei-showduplicates" name="EasyIndex[showDuplicates]">
+                        <option value="YES" #yesselected#>Yes</option>
+                        <option value="NO" #noselected#>No</option>
+                    </select><br>
+                        <span class="ei-explain xlate">Should duplicates be shown?</span><a href="#/helpurl##show-duplicates" class="ei-info" tabindex="-1" target="_blank"></a></td>
+                </tr>
+
+                <!-- END INCLUDEIF !isSecondary -->
+
+                <tr class="#ixType#IsGallery #ixIsGallery#">
+                    <td class="ei-label"><span class="xlate">Posts per scroll:</span></td>
+                    <td><input type="text" class="" value="#ixPostsPerScroll#" name="EasyIndex[#ixType#][ixPostsPerScroll]" size="8" #gallerydisable#><br><span class="ei-explain xlate">The number of posts to show each time the page is scrolled</span><a href="#/helpurl##posts-per-scroll" class="ei-info" tabindex="-1" target="_blank"></a>
+                    </td>
+                </tr>
+
+                <tr class="#ixType#HasExcerpts #ixHasExcerpts#">
+                    <td class="ei-label"><span class="xlate">Excerpt length:</span></td>
+                    <td><input type="text" class="" value="#ixExcerptLength#" name="EasyIndex[#ixType#][ixExcerptLength]" #excerptdisable#><br>
+                        <span class="ei-explain xlate">The number of characters in excerpts.</span><a href="#/helpurl##excerpt-length" class="ei-info" tabindex="-1" target="_blank"></a></td>
+                </tr>
+
+                <!-- START INCLUDEIF isSecondary -->
+                <tr class="#ixType#HasExcerpts #ixHasExcerpts#">
+                    <td class="ei-label"><span class="xlate">&quot;More&quot; text:</span></td>
+                    <td><input type="text" class="" value="#ixMoreText#" name="EasyIndex[#ixType#][ixMoreText]" #excerptdisable#><br>
+                        <span class="ei-explain xlate">The text to display when more posts are available.</span><a href="#/helpurl##more-text" class="ei-info" tabindex="-1" target="_blank"></a></td>
+                </tr>
+
+                <tr>
+                    <td class="ei-label"><span class="xlate">Page title:</span></td>
+                    <td><input type="text" value="#ixTitle#" name="EasyIndex[ixTitle]"/><br><span class="ei-explain xlate">The page title to use on the secondary index page.<br>
+                            The string %term% will be replaced by the actual term.</span><a href="#/helpurl##page-title" class="ei-info" tabindex="-1" target="_blank"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ei-label"><span class="xlate">Auto include on menus:</span></td>
+                    <td><input type="checkbox" name="EasyIndex[ixAutoMenu]" #autoMenuChecked#/><br><span class="ei-explain xlate">Automatically include secondary indexes on nav bar menus.</span><a href="#/helpurl##auto-include-on-menus" class="ei-info" tabindex="-1" target="_blank"></a>
+                    </td>
+                </tr>
+
+                <!-- START INCLUDEIF isPlus -->
+                <tr>
+                    <td class="ei-label"><span class="xlate">Post order:</span></td>
+                    <td><select name="EasyIndex[ixSequence]">
+                        <!-- START REPEAT SEQUENCE -->
+                        <option #selected# value="#value#">#label#</option>
+                        <!-- END REPEAT SEQUENCE -->
+                    </select>
+
+                        <br>
+                        <span class="ei-explain xlate">The order of the posts.</span><a href="#/helpurl##post-order" class="ei-info" tabindex="-1" target="_blank"></a>
+                    </td>
+                </tr>
+                <!-- END INCLUDEIF isPlus -->
+
+                <!-- START INCLUDEIF !isPlus -->
+                <tr>
+                    <td class="ei-label"><span class="xlate">Post order:</span></td>
+                    <td><select disabled name="EasyIndex[ixSequence]">
+                        <!-- START REPEAT SEQUENCE -->
+                        <option #selected# value="#value#">#label#</option>
+                        <!-- END REPEAT SEQUENCE -->
+                    </select>
+                        <br>
+                        <span class="ei-explain xlate">The order of the posts. EasyIndex Plus only.</span><a href="#/helpurl##post-order" class="ei-info" tabindex="-1" target="_blank"></a>
+                    </td>
+                </tr>
+                <!-- END INCLUDEIF !isPlus -->
+                <!-- END INCLUDEIF isSecondary -->
+
+                <tr>
+                    <td class="ei-label"><span class="xlate">Formatting:</span></td>
+                    <td>
+                        <button id="ei-#ixType#Basic" ei-index="#ixType#" class="ei-button ei-button-format">Format</button>
+                        <br><span class="ei-explain xlate">Basic index formatting.</span><a href="#/helpurl##formatting" class="ei-info" tabindex="-1" target="_blank"></a></td>
+                </tr>
+
+                <tr>
+                    <td class="ei-label"><span class="xlate">Custom CSS</span></td>
+                    <td><textarea name="EasyIndex[#ixType#][ixCustomCss]">#ixCustomCss#</textarea><br><span class="ei-explain xlate">Custom CSS for the #ixType# index</span><a href="#/helpurl##custom-css" class="ei-info" tabindex="-1" target="_blank"></a></td>
+                </tr>
+            </table>
+        </div>
+        <!-- END REPEAT IXTYPES -->
+        <div class="clearer"></div>
+        <div>
+            <div class="EISColHead">
+                <span class="xlate">What do you want to index? </span>
+                <select id="selEISTaxonomy" name="EasyIndex[indexTaxonomy]">
+                    <!-- START REPEAT TAXONOMIES -->
+                    <option value="#value#"
+                            #selected#>#label#
+                    </option>
+                    <!-- END REPEAT TAXONOMIES -->
+                </select><a href="#/helpurl##what-do-you-want-to-index" class="ei-info" tabindex="-1" target="_blank"></a>
+            </div>
+            <!-- START REPEAT TAXONOMYTERMS -->
+            <div class="EISTaxonomy #taxonomyVis#" id="taxonomy_#taxName#">
+                <div class="EISIncludeAll">
+                    <label><input class="inpEISIncludeAll" type="checkbox" name="EasyIndex[indexAllTerms][#taxName#]" #indexAllTermsChecked#><span class="xlate EISItalic">Include all current and future terms</span></label><a href="#/helpurl##include-all-current-and-future-terms" class="ei-info" tabindex="-1" target="_blank"></a>
+                </div>
+                <div class="EISCheckAll">
+                    <span class="EISSelectAll xlate">Select all</span> <span class="EISDeselectAll xlate">Deselect all</span> <a href="#/helpurl##select-all" class="ei-info" tabindex="-1" target="_blank"></a>
+                </div>
+
+                <div class="EISIncludeTerms1">
+                    <!-- START REPEAT TERMS1 -->
+                    <div class="EISTerm EISTerm#termDepth#">
+                        <label>
+                            <!-- START INCLUDEIF termSelected -->
+                            <input name="EasyIndex[indexTerms][#taxName#][]" type="checkbox" id="EISTerm#termID#" value="#termID#" checked>
+                            <!-- END INCLUDEIF termSelected --><!-- START INCLUDEIF !termSelected -->
+                            <input name="EasyIndex[indexTerms][#taxName#][]" type="checkbox" id="EISTerm#termID#" value="#termID#">
+                            <!-- END INCLUDEIF !termSelected -->&nbsp;#termName#</label>
+                    </div>
+                    <!-- END REPEAT TERMS1 -->
+                </div>
+                <div class="EISIncludeTerms2">
+                    <!-- START REPEAT TERMS2 -->
+                    <div class="EISTerm EISTerm#termDepth#">
+                        <label>
+                            <!-- START INCLUDEIF termSelected -->
+                            <input name="EasyIndex[indexTerms][#taxName#][]" type="checkbox" id="EISTerm#termID#" value="#termID#" checked>
+                            <!-- END INCLUDEIF termSelected --><!-- START INCLUDEIF !termSelected -->
+                            <input name="EasyIndex[indexTerms][#taxName#][]" type="checkbox" id="EISTerm#termID#" value="#termID#">
+                            <!-- END INCLUDEIF !termSelected -->&nbsp;#termName#</label>
+                    </div>
+                    <!-- END REPEAT TERMS2 -->
+                </div>
+                <div class="EISClear"></div>
+            </div>
+            <!-- END REPEAT TAXONOMYTERMS -->
+        </div>
+    </div>
+</main>
+#script#
+#styledialog#
+#generatethumbsdialog#
+<!-- START INCLUDEIF upgradeDialog -->
+#upgradeDialog#
+<!-- END INCLUDEIF upgradeDialog -->
+<!-- END PAGE -->
+</body>
+</html>
+

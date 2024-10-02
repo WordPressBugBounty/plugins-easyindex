@@ -1,0 +1,37 @@
+{
+    "name": "Calder",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "sample",
+    "hasExcerpts": false,
+    "description": "A sample of posts. Post titles are displayed below the image.",
+    "parent": "style001",
+    "isIncluded": true,
+    "sequence": 1,
+    "defaults": {
+        "ixNumberPosts": 4,
+        "ixThumbWidth": 150,
+        "ixThumbHeight": 150,
+        "ixTermTag": "h2",
+        "ixTitleTag": "h4"
+    },
+    "basic": [
+        {
+            "section": "Term heading",
+            "target": ".ei-term-name a",
+            "type": "text"
+        },
+        {
+            "section": "Post title box",
+            "target": ".ei-item-title",
+            "type": "box"
+        },
+        {
+            "section": "Post title",
+            "target": ".ei-item-title a",
+            "type": "text"
+        }
+    ],
+    "formatting": {}
+}

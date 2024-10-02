@@ -1,0 +1,23 @@
+{
+    "name": "Gilmore",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "single",
+    "isText": true,
+    "description": "A text index with a sample of posts, multiple per line with borders",
+    "sequence": 1,
+    "defaults": {
+        "ixThumbWidth": 0,
+        "ixThumbHeight": 0,
+        "ixTermTag": "div"
+    },
+    "basic": [
+        {
+            "section": "Term name",
+            "target": ".ei-term-name a",
+            "type": "text"
+        }
+    ],
+    "formatting": {}
+}

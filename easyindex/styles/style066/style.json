@@ -1,0 +1,20 @@
+{
+    "name": "Danby",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "sample",
+    "hasExcerpts": true,
+    "description": "A sample of posts with wide images and excerpts. Titles above and excerpts below the image",
+    "sequence": 1,
+    "parentID": "style063",
+    "defaults": {
+        "ixNumberPosts": 4,
+        "ixThumbWidth": 300,
+        "ixThumbHeight": 80,
+        "ixExcerptLength": 100,
+        "ixTermTag": "h2",
+        "ixTitleTag": "h4"
+    },
+    "formatting": {}
+}

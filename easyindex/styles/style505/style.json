@@ -1,0 +1,15 @@
+{
+    "name": "Forrest",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "secondary",
+    "styleType": "sample",
+    "hasExcerpts": false,
+    "description": "Wide images with the post title below",
+    "parentID": "style501",
+    "defaults": {
+        "ixThumbWidth": 250,
+        "ixThumbHeight": 100
+    },
+    "formatting": {}
+}

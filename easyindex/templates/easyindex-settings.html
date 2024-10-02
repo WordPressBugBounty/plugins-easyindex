@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- START PAGE -->
+<div id="divEISHeader">
+    <div class="EISHdr1">#pluginname# Settings</div>
+</div>
+<div id="easyindexUI" class="easyindexUI">
+    <form id="frmEISForm" method="post" action="" name="frmEISForm">
+        <input type="hidden" name="action" value="save"/>
+        <input type="hidden" name="nonce" value="#nonce#"/>
+
+        <div id="divEISTabs">
+            <ul>
+                <li><a href="#divEISGeneral" class="xlate">General Settings</a></li>
+                <li><a href="#divEISThumbnails" class="xlate">Primary Thumbnails</a></li>
+                <li><a href="#divEISNerdy" class="xlate">Nerdy Stuff</a></li>
+                <!-- START INCLUDEIF !isPlus -->
+                <li><a href="#divEISUpgrade" class="NoSave xlate">Upgrade</a></li>
+                <!-- END INCLUDEIF !isPlus -->
+                <li><a href="#divEISSupport" class="NoSave xlate">Support</a></li>
+            </ul>
+            <div id="divEISGeneral">#general#</div>
+            <div id="divEISThumbnails">#indexthumbs#</div>
+            <!-- START INCLUDEIF !isPlus -->
+            <div id="divEISUpgrade">#upgrade#</div>
+            <!-- END INCLUDEIF !isPlus -->
+            <div id="divEISNerdy">#nerdy#</div>
+            <div id="divEISSupport">#support#</div>
+            <div id="divEISSave">
+                <button class="xlate">Save Settings</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    window.EASYINDEX = window.EASYINDEX || {};
+    EASYINDEX.pluginVersion = '#pluginversion#';
+    EASYINDEX.wpurl = '#wpurl#';
+    EASYINDEX.license = '#license#';
+    EASYINDEX.pluginUrl = '#pluginUrl#';
+</script>
+<!-- END PAGE -->
+</body>
+</html>
+

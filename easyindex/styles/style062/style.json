@@ -1,0 +1,47 @@
+{
+    "name": "Dakota",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "sample",
+    "hasExcerpts": true,
+    "itemWidth": "auto",
+    "description": "A sample of posts with excerpts. Post titles and excerpts are displayed to the right of the image",
+    "sequence": 1,
+    "defaults": {
+        "ixNumberPosts": 4,
+        "ixThumbWidth": 150,
+        "ixThumbHeight": 150,
+        "ixExcerptLength": 200,
+        "ixTermTag": "h2",
+        "ixTitleTag": "h4"
+    },
+    "basic": [
+        {
+            "section": "Term heading",
+            "target": ".ei-term-name a",
+            "type": "text"
+        },
+        {
+            "section": "Post title box",
+            "target": ".ei-item-title",
+            "type": "box"
+        },
+        {
+            "section": "Post title",
+            "target": ".ei-item-title a",
+            "type": "text"
+        },
+        {
+            "section": "Excerpt text",
+            "target": ".ei-item-excerpt",
+            "type": "text"
+        },
+        {
+            "section": "\"More\" text",
+            "target": ".ei-term-more a",
+            "type": "text"
+        }
+    ],
+    "formatting": {}
+}

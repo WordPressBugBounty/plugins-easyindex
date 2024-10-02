@@ -1,0 +1,16 @@
+{
+    "name": "Beacon",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "single",
+    "description": "Wide preset images. The term name is displayed above the image",
+    "sequence": 1,
+    "parentID": "style022",
+    "defaults": {
+        "ixThumbWidth": 200,
+        "ixThumbHeight": 100,
+        "ixTermTag": "h3"
+    },
+    "formatting": {}
+}

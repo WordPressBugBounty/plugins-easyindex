@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- START PAGE -->
+<div id="eiFBContainer" style="display: none">
+    <div id="eiFBTabs">
+        <div class="ei-tabs-list">
+            <ul>
+                <!-- START REPEAT TABS -->
+                <li><a href="#eiFB#tabid#">#tabname#</a></li>
+                <!-- END REPEAT TABS -->
+            </ul>
+        </div>
+        <div class="ei-tabs-panels">
+            <!-- START REPEAT TABS -->
+            <!-- START INCLUDEIF isText -->
+            <div id="eiFB#tabid#" class="ei-panel" data-target="#target#">
+                <p><label>Font-family:</label><select class="ei-combobox ei-fmt-font-family"></select></p>
+
+                <p class="ei-nomarginbottom"><label>Color:</label><input autocomplete="off" class="ei-spectrum ei-fmt-color" type="text">
+                </p>
+
+                <p><label>Font-size:</label><select data-min="0" class="ei-combospinner ei-fmt-font-size" type="text"></select></p>
+
+                <p><label>Font-weight:</label><select class="ei-select2 ei-fmt-font-weight">
+                    <option>- clear -</option>
+                    <option>normal</option>
+                    <option>bold</option>
+                    <option>bolder</option>
+                    <option>lighter</option>
+                </select></p>
+
+                <p><label>Font-style:</label><select class="ei-select2 ei-fmt-font-style">
+                    <option>- clear -</option>
+                    <option>normal</option>
+                    <option>italic</option>
+                    <option>oblique</option>
+                </select></p>
+
+            </div>
+            <!-- END INCLUDEIF isText -->
+            <!-- START INCLUDEIF isBox -->
+            <div id="eiFB#tabid#" class="ei-panel" data-target="#target#">
+            <p><label>Height:</label><select data-min="0" class="ei-combospinner ei-fmt-height" type="text"></select></p>
+            </div>
+            <!-- END INCLUDEIF isBox -->
+            <!-- END REPEAT TABS -->
+        </div>
+    </div>
+    <!-- START INCLUDEIF !isPlus -->
+    <div class="ei-fmt-plus">
+        <p class="xlate">Want WAY more<br>formatting options?</p>
+        <p class="xlate" style="margin: 0">Check out</p>
+        <p class="ei-fmt-live" style="margin-top: 0"><a href="https://easyindexplugin.com/live-formatting.php" target="_blank">Live Formatting</a></p>
+    </div>
+    <!-- END INCLUDEIF !isPlus -->
+    <div class="ei-fmt-buttons">
+        <button class="ei-fmt-cancel">Cancel</button>
+        <button class="ei-fmt-ok">OK</button>
+    </div>
+</div>
+<!-- END PAGE -->
+</body>
+</html>
+
+

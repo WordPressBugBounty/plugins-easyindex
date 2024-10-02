@@ -1,0 +1,16 @@
+{
+    "name": "Benton",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "single",
+    "description": "Wide preset images. The term name is displayed below the image",
+    "sequence": 1,
+    "parentID": "style001",
+    "defaults": {
+        "ixThumbWidth": 200,
+        "ixThumbHeight": 100,
+        "ixTermTag": "h3"
+    },
+    "formatting": {}
+}

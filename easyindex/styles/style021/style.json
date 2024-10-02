@@ -1,0 +1,12 @@
+{
+    "name": "Baltic",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "single",
+    "description": "Square preset images. The term name is displayed below the image",
+    "sequence": 1,
+    "isIncluded": true,
+    "parentID": "style001",
+    "formatting": {}
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Barker",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "single",
+    "description": "Square preset images. The term name is displayed in a semi transparent box over the image",
+    "sequence": 1,
+    "parentID": "style001",
+    "isIncluded": true,
+    "defaults": {
+        "ixThumbWidth": 150,
+        "ixThumbHeight": 150,
+        "ixTermTag": "h4"
+    },
+    "formatting": {}
+}

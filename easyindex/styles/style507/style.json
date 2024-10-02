@@ -1,0 +1,17 @@
+{
+    "name": "Freeman",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "secondary",
+    "styleType": "sample",
+    "hasExcerpts": true,
+    "description": "Wide images with the post title and excerpt below",
+    "parentID": "style503",
+    "defaults": {
+        "ixThumbWidth": 250,
+        "ixThumbHeight": 100,
+        "ixExcerptLength": 40,
+        "ixTitleTag": "h4"
+    },
+    "formatting": {}
+}

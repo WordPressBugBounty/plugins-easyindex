@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- START PAGE -->
+<!-- START REPEAT IXTYPES -->
+<div id="eiss-#ixType#-container" class="eiss-dialog" style="display:none">
+    <div class="eiss-box">
+        <div class="eiss-groupArrow eiss-prev"></div>
+        <div class="eiss-window-vert">
+            <div class="eiss-slider-vert">
+                <!-- START REPEAT GROUPS -->
+                <li class="eiss-group-container">
+                    <div class="eiss-groupName">#name#</div>
+                    <div class="eiss-window-box">
+                        <div class="eiss-window">
+                            <div class="eiss-slider">
+                                <!-- START REPEAT STYLES -->
+                                <div data-style="#id#" class="eiss-style #plusonly#">
+                                    <div class="eiss-heading">#name#</div>
+                                    <div class="eiss-image">
+                                        <!-- START INCLUDEIF isIncluded -->
+                                        <img src="#img#"/>
+                                        <!-- END INCLUDEIF isIncluded -->
+                                        <!-- START INCLUDEIF !isIncluded -->
+                                        <div class="ei-plusStyle"><img src="#img#"/>
+                                        <div class="eiss-plus">Available in Plus Version</div></div>
+                                        <!-- END INCLUDEIF !isIncluded -->
+                                    </div>
+                                    <div class="eiss-description">#description#</div>
+                                </div>
+                                <!-- END REPEAT STYLES -->
+                            </div>
+                        </div>
+                        <div class="eiss-chevron eiss-prev"></div>
+                        <div class="eiss-chevron eiss-next"></div>
+                    </div>
+                    <!-- END REPEAT GROUPS -->
+                </li>
+            </div>
+        </div>
+        <div class="eiss-groupArrow eiss-next"></div>
+    </div>
+</div>
+<!-- END REPEAT IXTYPES -->
+<!-- END PAGE -->
+</body>
+</html>
+

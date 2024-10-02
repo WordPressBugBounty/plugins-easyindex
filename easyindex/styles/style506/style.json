@@ -1,0 +1,16 @@
+{
+    "name": "Franklin",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "secondary",
+    "hasExcerpts": false,
+    "styleType": "sample",
+    "description": "Wide images with the post title above",
+    "parentID": "style502",
+    "defaults": {
+        "ixThumbWidth": 250,
+        "ixThumbHeight": 100,
+        "ixTitleTag": "h4"
+    },
+    "formatting": {}
+}

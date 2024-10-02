@@ -1,0 +1,16 @@
+{
+    "name": "Alameda",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "onesample",
+    "description": "Wide sample images. The term name is displayed above the image",
+    "sequence": 1,
+    "parentID": "style002",
+    "defaults": {
+        "ixThumbWidth": 200,
+        "ixThumbHeight": 100,
+        "ixTermTag": "h4"
+    },
+    "formatting": {}
+}

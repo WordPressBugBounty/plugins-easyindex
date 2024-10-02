@@ -1,0 +1,113 @@
+body.ei-index #easyindex-index {
+  /* So the space between blocks is zero */
+  /* No longer used - has all sorts of problems on some themes */
+  /* Use unterminated <li>'s instead */
+  /* font size: 0; */
+  box-sizing: border-box;
+  text-align: center;
+}
+body.ei-index #easyindex-index,
+body.ei-index #easyindex-index div,
+body.ei-index #easyindex-index span,
+body.ei-index #easyindex-index pre,
+body.ei-index #easyindex-index a,
+body.ei-index #easyindex-index em,
+body.ei-index #easyindex-index img,
+body.ei-index #easyindex-index strong,
+body.ei-index #easyindex-index b,
+body.ei-index #easyindex-index u,
+body.ei-index #easyindex-index i,
+body.ei-index #easyindex-index label {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  font-family: inherit;
+  /*
+    font-weight: normal;
+    font-variant: normal;
+    */
+  font-size: 100%;
+  vertical-align: top;
+  line-height: normal;
+  text-shadow: none;
+  box-shadow: none;
+  position: relative;
+}
+body.ei-index #easyindex-index::before,
+body.ei-index #easyindex-index div::before,
+body.ei-index #easyindex-index span::before,
+body.ei-index #easyindex-index pre::before,
+body.ei-index #easyindex-index a::before,
+body.ei-index #easyindex-index em::before,
+body.ei-index #easyindex-index img::before,
+body.ei-index #easyindex-index strong::before,
+body.ei-index #easyindex-index b::before,
+body.ei-index #easyindex-index u::before,
+body.ei-index #easyindex-index i::before,
+body.ei-index #easyindex-index label::before,
+body.ei-index #easyindex-index::after,
+body.ei-index #easyindex-index div::after,
+body.ei-index #easyindex-index span::after,
+body.ei-index #easyindex-index pre::after,
+body.ei-index #easyindex-index a::after,
+body.ei-index #easyindex-index em::after,
+body.ei-index #easyindex-index img::after,
+body.ei-index #easyindex-index strong::after,
+body.ei-index #easyindex-index b::after,
+body.ei-index #easyindex-index u::after,
+body.ei-index #easyindex-index i::after,
+body.ei-index #easyindex-index label::after {
+  content: none;
+}
+body.ei-index #easyindex-index div::before,
+body.ei-index #easyindex-index div::after {
+  content: none;
+}
+body.ei-index #easyindex-index li.ei-item {
+  list-style: none;
+}
+body.ei-index #easyindex-index .ei-item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+body.ei-index #easyindex-index .ei-item-title {
+  position: relative;
+  overflow: hidden;
+  text-overflow: clip;
+  width: 100%;
+  line-height: normal;
+}
+body.ei-index #easyindex-index img {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+body.ei-index #easyindex-index a {
+  text-decoration: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+body.ei-secondary #easyindex-index .ei-item {
+  width: 150px;
+  margin: 0 10px 20px 10px;
+  line-height: 1.5;
+}
+body.ei-secondary #easyindex-index .ei-item div.ei-item-title {
+  font-size: 16px;
+  margin: 10px 0 10px 0;
+}
+body.ei-secondary #easyindex-index .ei-item .ei-item-title {
+  overflow: hidden;
+  text-overflow: clip;
+  width: 100%;
+  line-height: normal;
+  height: 5ex;
+}
+body.ei-secondary #easyindex-index .ei-item .ei-item-excerpt {
+  text-align: left;
+  font-size: 13px;
+}
+

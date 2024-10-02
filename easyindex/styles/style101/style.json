@@ -1,0 +1,17 @@
+{
+    "name": "Eaton",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "gallery",
+    "isMasonry": false,
+    "description": "A gallery of all posts with square images. Infinite scrolling",
+    "sequence": 1,
+    "defaults": {
+        "ixThumbWidth": 150,
+        "ixThumbHeight": 150,
+        "ixTermTag": "h3"
+    },
+    "basic": [],
+    "formatting": {}
+}

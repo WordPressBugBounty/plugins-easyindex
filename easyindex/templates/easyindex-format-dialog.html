@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<!-- START PAGE -->
+<div id="divFMTContainer" style="display: none">
+    <div id="divEITabs">
+        <div class="ei-tabs-list">
+            <ul>
+                <li><a href="#divEIText">Text</a></li>
+                <li><a href="#divEITextShadow">Text shadow</a></li>
+                <li><a href="#divEIBackground">Background</a></li>
+                <li><a href="#divEIBlock">Block</a></li>
+                <li><a href="#divEIBorder">Border</a></li>
+                <li><a href="#divEIBorderRadius">Border radius</a></li>
+                <li><a href="#divEIBox">Box</a></li>
+                <li><a href="#divEIBoxShadow">Box shadow</a></li>
+                <li><a href="#divEIPosition">Position/Size</a></li>
+                <li><a href="#divEILayout">Layout</a></li>
+                <li><a href="#divEIList">List</a></li>
+            </ul>
+        </div>
+        <div class="ei-tabs-panels">
+            <div id="divEIText">
+                <p><label>Font-family:</label><select class="ei-combobox ei-fmt-font-family"></select></p>
+
+                <p class="ei-nomarginbottom"><label>Color:</label><input autocomplete="off" class="ei-spectrum ei-fmt-color" type="text"></p>
+
+                <div class="ei-clearfix">
+                    <div class="ei-fmt-LHS">
+
+                        <p><label>Font-size:</label><select class="ei-combospinner ei-fmt-font-size" data-min="0" type="text"></select></p>
+
+                        <p><label>Font-weight:</label><select class="ei-select2 ei-fmt-font-weight">
+                            <option>- clear -</option>
+                            <option>normal</option>
+                            <option>bold</option>
+                            <option>bolder</option>
+                            <option>lighter</option>
+                        </select></p>
+
+                        <p><label>Font-style:</label><select class="ei-select2 ei-fmt-font-style">
+                            <option>- clear -</option>
+                            <option>normal</option>
+                            <option>italic</option>
+                            <option>oblique</option>
+                        </select></p>
+
+                        <p><label>Font-variant:</label><select class="ei-select2 ei-fmt-font-variant">
+                            <option>- clear -</option>
+                            <option>normal</option>
+                            <option>small-caps</option>
+                        </select></p>
+
+                        <p><label>Text-transform:</label><select class="ei-select2 ei-fmt-text-transform">
+                            <option>- clear -</option>
+                            <option>capitalize</option>
+                            <option>uppercase</option>
+                            <option>lowercase</option>
+                            <option>none</option>
+                        </select></p>
+
+
+                    </div>
+                    <div class="ei-fmt-RHS">
+                        <p>Text Decoration</p>
+                        <label><input class="ei-checkbox ei-fmt-text-decoration-underline" type="checkbox">Underline</label>
+                        <label><input class="ei-checkbox ei-fmt-text-decoration-overline" type="checkbox">Overline</label>
+                        <label><input class="ei-checkbox ei-fmt-text-decoration-line-through" type="checkbox">Line through</label>
+                        <label><input class="ei-checkbox ei-fmt-text-decoration-none" type="checkbox">None</label>
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="divEITextShadow">
+                <p><label>Horizontal offset:</label><input class="ei-spinner ei-fmt-text-shadow-x" type="text"></p>
+
+                <p><label>Vertical offset:</label><input class="ei-spinner ei-fmt-text-shadow-y" type="text"></p>
+
+                <p><label>Blur:</label><input class="ei-spinner ei-fmt-text-shadow-blur" data-min="0" type="text"></p>
+
+                <p><label>Color:</label><input autocomplete="off" class="ei-spectrum ei-fmt-text-shadow-color" type="text"></p>
+
+
+            </div>
+            <div id="divEIBackground">
+                <p><label>Background-color:</label><input autocomplete="off" class="ei-spectrum ei-fmt-background-color" type="text"></p>
+
+                <p><label>Background-image:</label><input autocomplete="off" class="ei-text ei-fmt-background-image" type="text"></p>
+
+                <p><label>Background-repeat:</label><select class="ei-select2 ei-fmt-background-repeat">
+                    <option>- clear -</option>
+                    <option>no-repeat</option>
+                    <option>repeat</option>
+                    <option>repeat-x</option>
+                    <option>repeat-y</option>
+                </select></p>
+                <p><label>Background-position (X):</label><select class="ei-combospinner ei-fmt-background-position-x"></select></p>
+
+                <p><label>Background-position (Y):</label><select class="ei-combospinner ei-fmt-background-position-y"></select></p>
+            </div>
+            <div id="divEIBlock">
+                <p><label>Line-height:</label><select data-step="0.1" data-min="0" class="ei-combospinner ei-fmt-line-height"></select></p>
+
+                <p><label>Vertical-align:</label><select class="ei-combospinner ei-fmt-vertical-align"></select></p>
+
+                <p><label>Text-align:</label><select class="ei-select2 ei-fmt-text-align">
+                    <option>- clear -</option>
+                    <option>left</option>
+                    <option>center</option>
+                    <option>right</option>
+                    <option>justify</option>
+                    <option>inherit</option>
+                </select></p>
+                <p><label>Text-indent:</label><select class="ei-combospinner ei-fmt-text-indent"></select></p>
+
+                <p><label>White-space:</label><select class="ei-select2 ei-fmt-white-space">
+                    <option>- clear -</option>
+                    <option>normal</option>
+                    <option>no-wrap</option>
+                    <option>pre</option>
+                    <option>pre-line</option>
+                    <option>pre-wrap</option>
+                    <option>inherit</option>
+                </select></p>
+                <p><label>Word-spacing:</label><select data-min="0" class="ei-combospinner ei-fmt-word-spacing"></select></p>
+
+                <p><label>Letter-spacing:</label><select class="ei-combospinner ei-fmt-letter-spacing"></select></p>
+            </div>
+            <div id="divEIBorder">
+                <!-- div -->
+                <div class="ei-fmt-borderlabels">
+                    <p>Top:</p>
+
+                    <p>Right:</p>
+
+                    <p>Bottom:</p>
+
+                    <p>Left:</p>
+                </div>
+
+                <div class="ei-fmt-3col ei-fmt-col1">
+
+                    <div class="ei-fmt-boxhead">Style</div>
+                    <div><label><input class="ei-same4all ei-same-border-style" type="checkbox" checked> Same for all</label></div>
+                    <p><select class="ei-select2 ei-fmt-border-top-style">
+                        <option>- clear -</option>
+                        <option>none</option>
+                        <option>solid</option>
+                        <option>dotted</option>
+                        <option>dashed</option>
+                        <option>double</option>
+                        <option>groove</option>
+                        <option>ridge</option>
+                        <option>inset</option>
+                        <option>outset</option>
+                    </select></p>
+                    <p><select class="ei-select2 ei-fmt-border-right-style disabled">
+                        <option>- clear -</option>
+                        <option>none</option>
+                        <option>solid</option>
+                        <option>dotted</option>
+                        <option>dashed</option>
+                        <option>double</option>
+                        <option>groove</option>
+                        <option>ridge</option>
+                        <option>inset</option>
+                        <option>outset</option>
+                    </select></p>
+
+                    <p><select class="ei-select2 ei-fmt-border-bottom-style disabled">
+                        <option>- clear -</option>
+                        <option>none</option>
+                        <option>solid</option>
+                        <option>dotted</option>
+                        <option>dashed</option>
+                        <option>double</option>
+                        <option>groove</option>
+                        <option>ridge</option>
+                        <option>inset</option>
+                        <option>outset</option>
+                    </select></p>
+
+                    <p><select class="ei-select2 ei-fmt-border-left-style disabled">
+                        <option>- clear -</option>
+                        <option>none</option>
+                        <option>solid</option>
+                        <option>dotted</option>
+                        <option>dashed</option>
+                        <option>double</option>
+                        <option>groove</option>
+                        <option>ridge</option>
+                        <option>inset</option>
+                        <option>outset</option>
+                    </select></p>
+                </div>
+                <div class="ei-fmt-3col ei-fmt-col2">
+                    <div class="ei-fmt-boxhead">Width</div>
+                    <div><label><input class="ei-same4all ei-same-border-width" type="checkbox" checked> Same for all</label></div>
+                    <p><select data-min="0" class="ei-combospinner ei-fmt-border-top-width" type="text"></select></p>
+
+                    <p><select data-min="0" class="ei-combospinner ei-fmt-border-right-width disabled" type="text"></select></p>
+
+                    <p><select data-min="0" class="ei-combospinner ei-fmt-border-bottom-width disabled" type="text"></select></p>
+
+                    <p><select data-min="0" class="ei-combospinner ei-fmt-border-left-width disabled" type="text"></select></p>
+                </div>
+                <div class="ei-fmt-3col ei-fmt-col3">
+                    <div class="ei-fmt-boxhead">Color</div>
+                    <div><label><input class="ei-same4all ei-same-border-color" type="checkbox" checked> Same for all</label></div>
+                    <p><input autocomplete="off" class="ei-spectrum ei-fmt-border-top-color" type="text"></p>
+
+                    <p><input autocomplete="off" class="ei-spectrum ei-fmt-border-right-color disabled" type="text"></p>
+
+                    <p><input autocomplete="off" class="ei-spectrum ei-fmt-border-bottom-color disabled" type="text"></p>
+
+                    <p><input autocomplete="off" class="ei-spectrum ei-fmt-border-left-color disabled" type="text"></p>
+                </div>
+
+            </div>
+            <div id="divEIBorderRadius">
+
+
+                <div id="eiBorderRadius">
+                    <div id="eiBorderRadiusSame"><label><input class="ei-same4all ei-same-border-radius" type="checkbox" checked> Same for all</label></div>
+                    <div id="eiBorderRadiusSpinners">
+                        <div class="outside line1"><input data-min="0" class="ei-spinner ei-fmt-border-top-left-radius" type="text"><input data-min="0" class="ei-spinner ei-fmt-border-top-right-radius disabled" type="text"></div>
+                        <!-- START IGNORE -->
+                        <div class="line2"><label><input class="ei-same4all ei-same-border-radius-y" type="checkbox"> Oval</label></div>
+                        <div class="inside line3"><input data-min="0" class="ei-spinner inside ei-fmt-border-top-left-radius-y disabled" type="text"><input data-min="0" class="ei-spinner ei-fmt-border-top-right-radius-y disabled" type="text"></div>
+                        <div class="inside line4"><input data-min="0" class="ei-spinner inside ei-fmt-border-bottom-left-radius-y disabled" type="text"><input data-min="0" class="ei-spinner ei-fmt-border-bottom-right-radius-y disabled" type="text"></div>
+                        <!-- END IGNORE -->
+                        <div class="outside line5"><input data-min="0" class="ei-spinner outside ei-fmt-border-bottom-left-radius disabled" type="text"><input data-min="0" class="ei-spinner ei-fmt-border-bottom-right-radius disabled" type="text"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="divEIBox">
+                <div class="ei-fmt-boxlabels">
+                    <p>Top:</p>
+
+                    <p>Right:</p>
+
+                    <p>Bottom:</p>
+
+                    <p>Left:</p>
+                </div>
+
+                <div class="ei-fmt-2col ei-fmt-col1">
+
+                    <div class="ei-fmt-boxhead">Padding</div>
+                    <div><label><input class="ei-same4all ei-same-padding" type="checkbox" checked> Same for all</label></div>
+                    <p><select data-min="0" class="ei-combospinner ei-fmt-padding-top" type="text"></select></p>
+
+                    <p><select data-min="0" class="ei-combospinner ei-fmt-padding-right disabled" type="text"></select></p>
+
+                    <p><select data-min="0" class="ei-combospinner ei-fmt-padding-bottom disabled" type="text"></select></p>
+
+                    <p><select data-min="0" class="ei-combospinner ei-fmt-padding-left disabled" type="text"></select></p>
+
+                </div>
+                <div class="ei-fmt-2col ei-fmt-col2">
+                    <div class="ei-fmt-boxhead">Margin</div>
+                    <div><label><input class="ei-same4all ei-same-margin" type="checkbox" checked> Same for all</label></div>
+                    <p><select class="ei-combospinner ei-fmt-margin-top" type="text"></select></p>
+
+                    <p><select class="ei-combospinner ei-fmt-margin-right disabled" type="text"></select></p>
+
+                    <p><select class="ei-combospinner ei-fmt-margin-bottom disabled" type="text"></select></p>
+
+                    <p><select class="ei-combospinner ei-fmt-margin-left disabled" type="text"></select></p>
+                </div>
+
+            </div>
+            <div id="divEIBoxShadow">
+
+                <p><label>Horizontal offset:</label><input class="ei-spinner ei-fmt-box-shadow-x" type="text"></p>
+
+                <p><label>Vertical offset:</label><input class="ei-spinner ei-fmt-box-shadow-y" type="text"></p>
+
+                <p><label>Blur:</label><input data-min="0" class="ei-spinner ei-fmt-box-shadow-blur" type="text"></p>
+
+                <p><label>Spread:</label><input class="ei-spinner ei-fmt-box-shadow-spread" type="text"></p>
+
+                <p><label>Color:</label><input autocomplete="off" class="ei-spectrum ei-fmt-box-shadow-color" type="text"></p>
+
+                <p><label>Inset:</label><input class="ei-checkbox ei-fmt-box-shadow-inset" type="checkbox"></p>
+
+            </div>
+            <div id="divEIPosition">
+                <div class="ei-fmt-2col ei-fmt-col1">
+                    <p><label>Width:</label><select data-min="0" class="ei-combospinner ei-fmt-width"></select>
+                    <p><label>Height:</label><select data-min="0" class="ei-combospinner ei-fmt-height"></select>
+
+                    <p><label>Position:</label><select class="ei-select2 ei-fmt-position">
+                        <option>- clear -</option>
+                        <option>none</option>
+                        <option>absolute</option>
+                        <option>fixed</option>
+                        <option>relative</option>
+                        <option>static</option>
+                        <option>inherit</option>
+                    </select></p>
+
+
+                    <p><label>Z-index:</label><select class="ei-combospinner ei-fmt-z-index"></select></p>
+
+                </div>
+                <div class="ei-fmt-2col ei-fmt-col2">
+                    <p><label>Top:</label><select class="ei-combospinner ei-fmt-top" type="text"></select></p>
+
+                    <p><label>Right:</label><select class="ei-combospinner ei-fmt-right" type="text"></select></p>
+
+                    <p><label>Bottom:</label><select class="ei-combospinner ei-fmt-bottom" type="text"></select></p>
+
+                    <p><label>Left:</label><select class="ei-combospinner ei-fmt-left" type="text"></select></p>
+                </div>
+
+            </div>
+            <div id="divEILayout">
+
+                <p><label>Visibility:</label><select class="ei-select2 ei-fmt-visibility">
+                    <option>- clear -</option>
+                    <option>visible</option>
+                    <option>hidden</option>
+                    <option>collapse</option>
+                    <option>inherit</option>
+                </select></p>
+                <p><label>Display:</label><select class="ei-select2 ei-fmt-display">
+                    <option>- clear -</option>
+                    <option>none</option>
+                    <option>block</option>
+                    <option>inline</option>
+                    <option>inherit</option>
+                    <option>inline-block</option>
+                    <option>inline-table</option>
+                    <option>list-item</option>
+                    <option>table</option>
+                    <option>table-cell</option>
+                    <option>table-column</option>
+                    <option>table-column-group</option>
+                    <option>table-footer-group</option>
+                    <option>table-header-group</option>
+                    <option>table-row</option>
+                    <option>table-row-group</option>
+                    <option>flex</option>
+                    <option>inline-flex</option>
+                    <option>grid</option>
+                    <option>inline-grid</option>
+                    <option>run-in</option>
+                </select></p>
+                <p><label>Float:</label><select class="ei-select2 ei-fmt-float">
+                    <option>- clear -</option>
+                    <option>left</option>
+                    <option>right</option>
+                    <option>none</option>
+                    <option>inherit</option>
+                </select></p>
+                <p><label>Clear:</label><select class="ei-select2 ei-fmt-clear">
+                    <option>- clear -</option>
+                    <option>both</option>
+                    <option>left</option>
+                    <option>right</option>
+                    <option>none</option>
+                    <option>inherit</option>
+                </select></p>
+
+                <p><label>Cursor:</label><select class="ei-select2 ei-fmt-cursor">
+                    <option>- clear -</option>
+                    <option>auto</option>
+                    <option>default</option>
+                    <option>none</option>
+                    <option>context-menu</option>
+                    <option>help</option>
+                    <option>pointer</option>
+                    <option>progress</option>
+                    <option>wait</option>
+                    <option>cell</option>
+                    <option>crosshair</option>
+                    <option>text</option>
+                    <option>vertical-text</option>
+                    <option>alias</option>
+                    <option>copy</option>
+                    <option>move</option>
+                    <option>no-drop</option>
+                    <option>not-allowed</option>
+                    <option>e-resize</option>
+                    <option>n-resize</option>
+                    <option>ne-resize</option>
+                    <option>nw-resize</option>
+                    <option>s-resize</option>
+                    <option>se-resize</option>
+                    <option>sw-resize</option>
+                    <option>w-resize</option>
+                    <option>ew-resize</option>
+                    <option>ns-resize</option>
+                    <option>nesw-resize</option>
+                    <option>nwse-resize</option>
+                    <option>col-resize</option>
+                    <option>row-resize</option>
+                    <option>all-scroll</option>
+                    <option>zoom-in</option>
+                    <option>zoom-out</option>
+                    <option>grab</option>
+                    <option>grabbing</option>
+                </select></p>
+
+                <p><label>Overflow:</label><select class="ei-select2 ei-fmt-overflow">
+                    <option>- clear -</option>
+                    <option>hidden</option>
+                    <option>visible</option>
+                    <option>scroll</option>
+                    <option>auto</option>
+                    <option>inherit</option>
+                </select></p>
+            </div>
+            <div id="divEIList">
+                <p><label>List-style-type:</label><select class="ei-select2 ei-fmt-list-style-type">
+                    <option>- clear -</option>
+                    <option>none</option>
+                    <option>inherit</option>
+                    <option>disc</option>
+                    <option>circle</option>
+                    <option>square</option>
+                    <option>decimal</option>
+                    <option>decimal-leading-zero</option>
+                    <option>lower-roman</option>
+                    <option>upper-roman</option>
+                    <option>lower-greek</option>
+                    <option>lower-latin</option>
+                    <option>upper-latin</option>
+                    <option>armenian</option>
+                    <option>georgian</option>
+                    <option>lower-alpha</option>
+                    <option>upper-alpha</option>
+                </select></p>
+                <p><label>List-style-image:</label><input autocomplete="off" class="ei-text ei-fmt-list-style-image" type="text"></p>
+                <p><label>List-style-position:</label><select class="ei-select2 ei-fmt-list-style-position">
+                    <option>- clear -</option>
+                    <option>inherit</option>
+                    <option>inside</option>
+                    <option>outside</option>
+                </select></p>
+
+            </div>
+        </div>
+    </div>
+    <div class="ei-fmt-buttons">
+        <button class="ei-fmt-highlight">Highlight</button>
+        <button class="ei-fmt-reset">Reset</button>
+        <button class="ei-fmt-cancel">Cancel</button>
+        <button class="ei-fmt-ok">OK</button>
+    </div>
+</div>
+<!-- END PAGE -->
+</body>
+</html>
+
+

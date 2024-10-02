@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- START PAGE -->
+<!-- START INCLUDEIF hasError -->
+<div class="EISSettingError">
+    <!-- START REPEAT ERRORS -->
+    <div>ERROR: #error#</div>
+    <!-- END REPEAT ERRORS -->
+</div>
+<!-- END INCLUDEIF hasError -->
+<table style="width:95%;margin-left:auto;margin-right:auto; border-collapse:collapse">
+    <tr>
+        <td class="ei-label">#pluginname# <span class="xlate">Version:</span></td>
+        <td id="eisVersionCheck"><span style="font-weight:bold">#pluginversion#</span> &nbsp; &nbsp;<span id="spnEISVersionSpin"></span><span id="spnEISLatestVersion" class="xlate">Checking for updates...</span></td>
+    </tr>
+
+    <!-- START INCLUDEIF isPlus -->
+    <tr>
+        <td class="ei-label"><span class="xlate">License key:</span><br><span class="xlate ei-explain ei-active #active#">Activated</span><span class="xlate ei-explain ei-inactive #active#">Not activated</span></td>
+        <td><input style="width:300px" class="ei-textfield" type="text" name="EasyIndex[licenseKey]" value="#licenseKey#"/>
+            <button id="btnEISActivate" class="#displayactivate#">Activate license</button>
+            <button id="btnEISDeactivate" class="#displaydeactivate#">Deactivate license</button>
+            <div id="spnEISActivateSpin"></div>
+            <div id="eiActivateError"></div>
+            <br>
+            <span class="ei-explain xlate">Enter your license key to enable automatic updates and priority support</span><a href="#/helpurl##license-key" class="ei-info" tabindex="-1" target="_blank"></a></td>
+    </tr>
+    <!-- END INCLUDEIF isPlus -->
+    <tr>
+        <td class="ei-label"><span class="xlate">Default index slug:</span></td>
+        <td><input style="width:300px" class="ei-textfield" type="text" name="EasyIndex[defaultSlug]" value="#defaultSlug#"/>
+            <br>
+            <span class="ei-explain xlate">This is the default string that gets inserted into index URL's so Wordpress can identify the page as an EasyIndex<br>
+                       It must be 20 characters or less, all lowercase and contain only letters, numbers, and hyphens.<br>
+                       You can change this on individual indexes (Plus version only)</span><a href="#/helpurl##defult-index-slug" class="ei-info" tabindex="-1" target="_blank"></a></td>
+    </tr>
+    <tr>
+        <td class="ei-label"><span class="xlate">Thumbnail directory:</span></td>
+        <td><input style="width:480px" class="ei-textfield" type="text" name="EasyIndex[thumbDirectory]" value="#thumbDirectory#"/>
+            <br>
+            <span class="ei-explain xlate">The absolute path of the directory where thumbnails will be saved</span><a href="#/helpurl##thumbnail-directory" class="ei-info" tabindex="-1" target="_blank"></a></td>
+    </tr>
+
+    <tr>
+        <td class="ei-label"><span class="xlate">Thumbnail Base URL:</span></td>
+        <td><input style="width:480px" class="ei-textfield" type="text" name="EasyIndex[thumbUrl]" value="#thumbUrl#"/>
+            <br>
+            <span class="ei-explain xlate">The base URL where the index thumbnails can be found</span><a href="#/helpurl##thumbnail-directory" class="ei-info" tabindex="-1" target="_blank"></a></td>
+    </tr>
+
+    <!-- START INCLUDEIF isPlus -->
+    <tr>
+        <td class="ei-label"><span class="xlate">Test background processing:</span></td>
+        <td>
+            <button id="btnEISTestBackground">Test</button>
+            <span id="spnEISBGSpin"></span><span style="display:none" class="ei-bgtest" id="spnEISBGOK">Tested OK</span><span class="ei-bgtest" style="display:none" id="spnEISBGFAIL">Test failed. Background processing is not possible</span>
+            <br>
+            <span class="ei-explain xlate">Some hosts are not capable of running the process necessary to do background thumbnail generation.</span><a href="#/helpurl##background-test" class="ei-info" tabindex="-1" target="_blank"></a></td>
+    </tr>
+
+    <tr>
+        <td class="ei-label"><span class="xlate">Use background thumb generation:</span></td>
+        <td><input id="bgGeneration" type="checkbox" name="EasyIndex[bgGeneration]" #bgGenerationChecked#/>
+            <br>
+            <span class="ei-explain xlate">Generate thumbnails in the background. Uncheck this if you have trouble generating thumbnails.</span><a href="#/helpurl##use-background-thumb-generation" class="ei-info" tabindex="-1" target="_blank"></a></td>
+    </tr>
+    <!-- END INCLUDEIF isPlus -->
+
+    <!-- START INCLUDEIF !isPlus -->
+    <tr>
+        <td class="ei-label"><span class="xlate">Test background processing:</span></td>
+        <td>
+            <button disabled id="btnEISTestBackground">Test</button>
+            <span id="spnEISBGSpin"></span><span style="display:none" class="ei-bgtest" id="spnEISBGOK">Tested OK</span><span class="ei-bgtest" style="display:none" id="spnEISBGFAIL">Test failed. Background processing is not possible</span>
+            <br>
+            <span class="ei-explain xlate">Background thumbnail generation is only available in EasyIndex Plus</span><a href="#/helpurl##background-test" class="ei-info" tabindex="-1" target="_blank"></a></td>
+    </tr>
+
+    <tr>
+        <td class="ei-label"><span class="xlate">Use background thumb generation:</span></td>
+        <td><input disabled id="bgGeneration" type="checkbox" name="EasyIndex[bgGeneration]"/>
+            <br>
+            <span class="ei-explain xlate">Background thumbnail generation is only available in EasyIndex Plus</span><a href="#/helpurl##use-background-thumb-generation" class="ei-info" tabindex="-1" target="_blank"></a></td>
+    </tr>
+    <!-- END INCLUDEIF !isPlus -->
+
+    <tr>
+        <td class="ei-label"><span class="xlate">Thumbnail generator timeout:</span></td>
+        <td><input type="text" style="width:50px" class="ei-textfield" name="EasyIndex[generatorTimeout]" value="#generatorTimeout#"/>
+            <br>
+            <span id="bgTOExplain" class="ei-explain xlate #bgTODisplay#">The number of <strong>minutes</strong> the generator can run before giving up</span>
+            <span id="fgTOExplain" class="ei-explain xlate #fgTODisplay#">The number of <strong>seconds</strong> the generator will run on each iteration</span>
+            <a href="#/helpurl##thumbnail-generator-timeout" class="ei-info" tabindex="-1" target="_blank"></a>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="ei-label"><span class="xlate">Thumbnail memory:</span></td>
+        <td><input id="inpEISMemory" class="ei-textfield" style="width:50px" type="text" name="EasyIndex[thumbMemory]" value="#thumbMemory#"/>
+            <br>
+            <span class="ei-explain xlate">The PHP memory limit EasyIndex will attempt to set when creating thumbnails</span><a href="#/helpurl##thumbnail-memory" class="ei-info" tabindex="-1" target="_blank"></a></td>
+    </tr>
+
+    <tr>
+        <td class="ei-label"><span class="xlate">Disable Jetpack photo CDN for index thumbnails:</span></td>
+        <td>
+            <input id="disablePhoton" type="checkbox" name="EasyIndex[disablePhoton]" #disablePhotonChecked#/>
+            <br>
+            <span class="ei-explain xlate">The Jetpack photo CDN cache can never be cleared. Check this to bypass the CDN for index thumbnails</span><a href="#/helpurl##disable-jetpack-cdn" class="ei-info" tabindex="-1" target="_blank"></a>
+        </td>
+    </tr>
+
+    <!-- START IGNORE -->
+    <tr>
+        <td class="ei-label"><span class="xlate">Show us some love!</span></td>
+        <td></td>
+    </tr>
+    <!-- END IGNORE -->
+</table>
+<!-- END PAGE -->
+</body>
+</html>
+

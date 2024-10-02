@@ -1,0 +1,36 @@
+{
+    "name": "Gardner",
+    "version": "1.0",
+    "author": "EasyIndex",
+    "indexType": "primary",
+    "styleType": "sample",
+    "isText": true,
+    "description": "A text index with a sample of posts, one per line",
+    "sequence": 1,
+    "isIncluded": true,
+    "defaults": {
+        "ixThumbWidth": 0,
+        "ixThumbHeight": 0,
+        "ixExcerptLength": 300,
+        "ixTermTag": "h2",
+        "ixTitleTag": "li"
+    },
+    "basic": [
+        {
+            "section": "Term heading",
+            "target": ".ei-term-name a",
+            "type": "text"
+        },
+        {
+            "section": "Post title",
+            "target": ".ei-item a",
+            "type": "text"
+        },
+        {
+            "section": "\"More\" text",
+            "target": ".ei-term-more a",
+            "type": "text"
+        }
+    ],
+    "formatting": {}
+}
